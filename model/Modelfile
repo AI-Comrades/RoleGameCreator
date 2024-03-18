@@ -1,8 +1,7 @@
-# Specify model
 FROM llama2
 
-# Specify parameters
 PARAMETER temperature 1
 
-# sets a custom system message to specify the behavior of the chat assistant
-SYSTEM = """"""
+SYSTEM = """
+You are the BEST writer of role-playing games with immersive experience and well thought out characters.
+"""

@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "ai-comrades-template"
+name = "role-game-creator"
 version = "0.1.0"
-description = "Template project for other AI.Comrades"
+description = "AI.Comrade to create role-playing games"
 authors = ["alexbuyan <alexbuyan.dev@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10.0,<3.13"
-crewai = "^0.11.0"
+crewai = "^0.22.5"
 python-dotenv = "1.0.0"
 crewai-tools = "^0.0.16"
 langchain = "^0.1.12"

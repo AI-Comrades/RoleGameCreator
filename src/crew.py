@@ -1,28 +1,34 @@
 from crewai import Crew
-from agents import Agents
-from tasks import Tasks
+from src.agents import Agents
+from src.tasks import Tasks
 from dotenv import load_dotenv
 
 
 load_dotenv()
 
 class AIComradesCrew():
-    def run(self):
+    def run(self, theme, n_roles, n_interactions, n_tasks):
         # Define your custom agents and tasks in agents.py and tasks.py
         agents = Agents()
         tasks = Tasks()
 
         # Define your custom agents and tasks here
-        agent = agents.example_agent()
+        scenario_writer = agents.scenario_writer()
+        role_writer = agents.role_writer()
 
         # Custom tasks include agent name and variables as input
-        task = tasks.example_task(agent)
+        scenario_task = tasks.write_scenario(scenario_writer, theme, n_roles)
+        roles_task = tasks.write_roles(role_writer, n_interactions, n_tasks)
 
         # Define your custom crew here
+        crew_agents = [scenario_writer, role_writer]
+        crew_tasks = [scenario_task, roles_task]
+
         crew = Crew(
-            agents=[agent],
-            tasks=[task],
+            agents=crew_agents,
+            tasks=crew_tasks,
             verbose=True,
+            full_output=True,
         )
 
         result = crew.kickoff()
