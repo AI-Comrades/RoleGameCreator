@@ -754,25 +754,30 @@ files = [
 
 [[package]]
 name = "crewai"
-version = "0.11.2"
+version = "0.22.5"
 description = "Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
 optional = false
-python-versions = ">=3.10,<4.0"
+python-versions = ">=3.10,<=3.13"
 files = [
-    {file = "crewai-0.11.2-py3-none-any.whl", hash = "sha256:cb6950e5cdd34274fe2659372515cb57f2747d9a21c6083678943b6dfeed0ca6"},
-    {file = "crewai-0.11.2.tar.gz", hash = "sha256:bc3eba593b6053d9dd897d451a556942b54774b3c3b5e4f5323708bcdf26666e"},
+    {file = "crewai-0.22.5-py3-none-any.whl", hash = "sha256:9f254d8b2ebd7fae9a43d0ebab116a3f536c6620ca3bc955cb796fc8bb9beb7d"},
+    {file = "crewai-0.22.5.tar.gz", hash = "sha256:03c76a04f46a432a1c3d9e5e0c8e039f983b25019194b0ab2ec594762ac380cf"},
 ]
 
 [package.dependencies]
+click = ">=8.1.7,<9.0.0"
 instructor = ">=0.5.2,<0.6.0"
-langchain = ">=0.1.0,<0.2.0"
+langchain = ">=0.1.10,<0.2.0"
 langchain-openai = ">=0.0.5,<0.0.6"
-openai = ">=1.7.1,<2.0.0"
+openai = ">=1.13.3,<2.0.0"
 opentelemetry-api = ">=1.22.0,<2.0.0"
 opentelemetry-exporter-otlp-proto-http = ">=1.22.0,<2.0.0"
 opentelemetry-sdk = ">=1.22.0,<2.0.0"
 pydantic = ">=2.4.2,<3.0.0"
+python-dotenv = "1.0.0"
 regex = ">=2023.12.25,<2024.0.0"
+
+[package.extras]
+tools = ["crewai-tools (>=0.0.15,<0.0.16)"]
 
 [[package]]
 name = "crewai-tools"
@@ -1143,13 +1148,13 @@ files = [
 
 [[package]]
 name = "fsspec"
-version = "2024.3.0"
+version = "2024.3.1"
 description = "File-system specification"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "fsspec-2024.3.0-py3-none-any.whl", hash = "sha256:779001bd0122c9c4975cf03827d5e86c3afb914a3ae27040f15d341ab506a693"},
-    {file = "fsspec-2024.3.0.tar.gz", hash = "sha256:f13a130c0ed07e15c4e1aeb0472a823e9c426b0b5792a1f40d902b0a71972d43"},
+    {file = "fsspec-2024.3.1-py3-none-any.whl", hash = "sha256:918d18d41bf73f0e2b261824baeb1b124bcf771767e3a26425cd7dec3332f512"},
+    {file = "fsspec-2024.3.1.tar.gz", hash = "sha256:f39780e282d7d117ffb42bb96992f8a90795e4d0fb0f661a70ca39fe9c43ded9"},
 ]
 
 [package.extras]
@@ -4952,4 +4957,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.13"
-content-hash = "5b70bbb5d1e183ec08ff8f1e32db872e02b97eb83216045b27f830dd3f43842e"
+content-hash = "88275dc2e845886934679676ef732be86efa8350eed813a952fd019f6c0b2204"
