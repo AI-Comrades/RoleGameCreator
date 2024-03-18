@@ -1,4 +1,4 @@
-FROM llama2
+FROM zephyr
 
 PARAMETER temperature 1
 

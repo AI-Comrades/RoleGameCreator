@@ -1,7 +1,7 @@
 #!/bin/bash
 
-model_name="llama2"
-custom_model_name="role-game-creator-llama2"
+model_name="zephyr"
+custom_model_name="role-game-creator-zephyr"
 
 ollama pull $model_name
 
