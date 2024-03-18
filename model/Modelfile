@@ -1,0 +1,8 @@
+# Specify model
+FROM llama2
+
+# Specify parameters
+PARAMETER temperature 1
+
+# sets a custom system message to specify the behavior of the chat assistant
+SYSTEM = """"""
